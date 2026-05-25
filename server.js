@@ -59,13 +59,13 @@ const server = http.createServer(async (req, res) => {
 
     // --- STATIC FILES CORNER ---
     if (method === 'GET' && (pathname === '/' || pathname === '/index.html')) {
-        return serveStaticFile(res, path.join(__dirname, 'public', 'index.html'), 'text/html');
+        return serveStaticFile(res, path.join(__dirname, 'index.html'), 'text/html');
     }
-    if (method === 'GET' && pathname === '/styles.css') {
-        return serveStaticFile(res, path.join(__dirname, 'public', 'styles.css'), 'text/css');
+    if (method === 'GET' && (pathname === '/styles.css' || pathname === '/style.css')) {
+        return serveStaticFile(res, path.join(__dirname, 'styles.css'), 'text/css');
     }
     if (method === 'GET' && pathname === '/app.js') {
-        return serveStaticFile(res, path.join(__dirname, 'public', 'app.js'), 'application/javascript');
+        return serveStaticFile(res, path.join(__dirname, 'app.js'), 'application/javascript');
     }
 
     // --- DATABASE SCHEMA & LOGS API ---
