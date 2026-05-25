@@ -1,3 +1,13 @@
+---
+title: Splitwise DBMS
+emoji: ⇄
+colorFrom: green
+colorTo: blue
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # Splitwise DBMS Project Analyzer
 
 A complete, educational web-based Splitwise application designed specifically as a Database Management Systems (DBMS) project. 
