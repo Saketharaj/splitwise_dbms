@@ -1,6 +1,6 @@
 ---
 title: Splitwise DBMS
-emoji: ⇄
+emoji: 💸
 colorFrom: green
 colorTo: blue
 sdk: docker
