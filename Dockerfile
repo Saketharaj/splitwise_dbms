@@ -13,6 +13,9 @@ RUN npm install
 # Copy the rest of the application files with node user ownership
 COPY --chown=node:node . .
 
+# Ensure the node user owns the /app directory to allow creating the SQLite file
+RUN chown -R node:node /app
+
 # Switch to the node user (UID 1000)
 USER node
 
