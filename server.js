@@ -6,7 +6,7 @@ const path = require('path');
 const url = require('url');
 const db = require('./db');
 
-const PORT = 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
 // Helper to serve static files
 function serveStaticFile(res, filePath, contentType) {
